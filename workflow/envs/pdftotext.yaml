@@ -1,0 +1,5 @@
+name: pdftotext
+channels:
+  - defaults
+dependencies:
+  - poppler=21.11.0

@@ -1,3 +1,16 @@
 rule all:
-	input:
-		""
+    input:
+        "",
+
+
+rule pdftotext:
+    input:
+        "tests/data/{name}.pdf",
+    output:
+        "tests/data/pdftotext/{name}.txt",
+    log:
+        "logs/pdftotext/{name}.log",
+    conda:
+        "envs/pdftotext.yaml"
+    shell:
+        "pdftotext -layout -nodiag {input} {output}"
