@@ -65,23 +65,27 @@ repos:
         entry: snakemake --lint text
         language: system
         files: \.smk$|Snakefile
+  #      - id: conda-minify
+  #        name: conda-minify
+  #        entry: conda
+  #        language: system
+  #        always_run: true
+  #        types: ["file", "directory"]
+  #        args:
+  #          [
+  #            "run",
+  #            "-n",
+  #            "base",
+  #            "conda-minify",
+  #            "-n",
+  #            "research",
+  #            "-f",
+  #            "requirements.yaml",
+  #          ]
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.5.1
     hooks:
       - id: prettier
-  - repo: https://github.com/python-poetry/poetry
-    rev: 1.2.0b1
-    hooks:
-      - id: poetry-check
-      - id: poetry-export
-        args:
-          [
-            "-f",
-            "requirements.txt",
-            "-o",
-            "requirements.txt",
-            "--without-hashes",
-          ]
   - repo: https://github.com/snakemake/snakefmt
     rev: 0.6.1
     hooks:
