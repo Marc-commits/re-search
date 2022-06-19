@@ -1,0 +1,9 @@
+[submodule "modules/vila"]
+	path = modules/vila
+	url = https://github.com/allenai/VILA
+[submodule "modules/scientific-claim-generation"]
+	path = modules/scientific-claim-generation
+	url = https://github.com/allenai/scientific-claim-generation
+[submodule "modules/scifact"]
+	path = modules/scifact
+	url = https://github.com/allenai/scifact
