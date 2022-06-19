@@ -275,3 +275,4 @@ $RECYCLE.BIN/
 *.lock
 tests/data/*
 requirements_conda.yaml
+.snakemake/
