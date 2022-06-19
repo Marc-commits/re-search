@@ -60,6 +60,11 @@ repos:
         language: system
         types: [text]
         stages: [commit, push, manual]
+      - id: snakemake-lint
+        name: snakemake-lint
+        entry: snakemake --lint text
+        language: system
+        files: \.smk$|Snakefile
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.5.1
     hooks:
@@ -77,3 +82,7 @@ repos:
             "requirements.txt",
             "--without-hashes",
           ]
+  - repo: https://github.com/snakemake/snakefmt
+    rev: 0.6.1
+    hooks:
+      - id: snakefmt
