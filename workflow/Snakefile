@@ -5,9 +5,9 @@ rule all:
 
 rule pdftotext:
     input:
-        "tests/data/{name}.pdf",
+        "pdfs/{name}.pdf",
     output:
-        "tests/data/pdftotext/{name}.txt",
+        "pdfs/pdftotext/{name}.txt",
     log:
         "logs/pdftotext/{name}.log",
     conda:
