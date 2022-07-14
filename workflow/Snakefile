@@ -20,10 +20,10 @@ rule camelot_extract_tables:
     input:
         "pdfs/{name}.pdf",
     output:
-        "pdfs/camelot/{name}.zip",
+        "pdfs/camelot/{name}/{name}.csv",
     log:
         "logs/camelot/{name}.log",
     conda:
         "envs/camelot.yaml"
     shell:
-        "camelot --format csv --output {output} --zip stream {input}"
+        "camelot --format csv --output {output} --pages all stream {input}"
