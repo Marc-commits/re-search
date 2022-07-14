@@ -14,3 +14,16 @@ rule pdftotext:
         "envs/pdftotext.yaml"
     shell:
         "pdftotext -layout -nodiag {input} {output}"
+
+
+rule camelot_extract_tables:
+    input:
+        "pdfs/{name}.pdf",
+    output:
+        "pdfs/camelot/{name}.zip",
+    log:
+        "logs/camelot/{name}.log",
+    conda:
+        "envs/camelot.yaml"
+    shell:
+        "camelot --format csv --output {output} --zip stream {input}"
