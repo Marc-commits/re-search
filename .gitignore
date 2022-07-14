@@ -273,6 +273,6 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,python,pycharm+all
 *.lock
-tests/data/*
 requirements_conda.yaml
 .snakemake/
+pdfs/
